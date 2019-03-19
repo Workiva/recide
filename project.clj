@@ -10,6 +10,10 @@
                  [org.clojure/data.fressian "0.2.1"]
                  [com.workiva/utiliva "0.1.0"]]
 
+  :deploy-repositories {"clojars"
+                        {:url "https://repo.clojars.org"
+                         :sign-releases false}}
+
   :source-paths ["src"]
   :test-paths ["test"]
   :java-source-paths ["java-src"]
