@@ -1,4 +1,4 @@
-# Recide
+# Recide [![Clojars Project](https://img.shields.io/clojars/v/com.workiva/recide.svg)](https://clojars.org/com.workiva/recide)
 
 *recide, third-person singular present indicative of `recidere`:* - to fall back, come to naught; to curtail
 
