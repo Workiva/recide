@@ -1,6 +1,6 @@
 # Recide [![Clojars Project](https://img.shields.io/clojars/v/com.workiva/recide.svg)](https://clojars.org/com.workiva/recide)
 
-*recide, third-person singular present indicative of `recidere`:* - to fall back, come to naught; to curtail
+*recide, second-person singular present imperative of `recidere`:* - to fall back, come to naught; to curtail
 
 Clojure's [`ex-info`](https://clojuredocs.org/clojure.core/ex-info) is a very useful construct: you can attach a map of arbitrary data to a thrown exception, allowing code that has caught the exception to examine, log, or otherwise process this [`ex-data`](https://clojuredocs.org/clojure.core/ex-data).
 
