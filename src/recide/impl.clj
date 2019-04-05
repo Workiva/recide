@@ -355,13 +355,11 @@
             ["Returns a recide error (IExceptionInfo) with the type (keyword), msg (string), data (map),"
              "and cause (Throwable). Merges the following map onto the ex-data:"
              ""
-             "{:recide/error %s,"
-             " %s type}"
+             "For Example: `{:recide/error recide.error.ErrorForm@447521e, :recide/type type}`"
              ""
-             "ErrorForm definition: %s"
-             "Constructor: %s"])
-           resolved-error
-           (rerr/type-keyword resolved-error)
+             "ErrorForm definition: `%s`"
+             ""
+             "Constructor: `%s`"])
            custom-error
            (.getName ^Class (class (rerr/constructor resolved-error)))))
        {:arglists '~'[[type msg data] [type msg data cause]]}
