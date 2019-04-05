@@ -13,20 +13,14 @@ fi
 MD5_ROOT_README_BEFORE=$(find README.md -type f -exec $md5Command {} \; | sort -k 2 | $md5Command)
 MD5_DOCS_BEFORE=$(find ./documentation -type f -exec $md5Command {} \; | sort -k 2 | $md5Command)
 
-cp -R ./documentation ./documentation.bak
-echo $MD5_DOCS_BEFORE
-
 # Update Table of Contents
 ./.circleci/scripts/update-tocs.sh
 # Update Codox documentation
 lein docs
 
-diff -r ./documentation ./documentation.bak
-
 # Calculate Later
 MD5_ROOT_README_AFTER=$(find README.md -type f -exec $md5Command {} \; | sort -k 2 | $md5Command)
 MD5_DOCS_AFTER=$(find ./documentation -type f -exec $md5Command {} \; | sort -k 2 | $md5Command)
-echo $MD5_DOCS_AFTER
 
 # Verify root README.md
 if [ "$MD5_ROOT_README_BEFORE" != "$MD5_ROOT_README_AFTER" ]; then
