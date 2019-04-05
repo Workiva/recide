@@ -30,7 +30,7 @@ fi
 
 # Verify ./documentation content
 if [ "$MD5_DOCS_BEFORE" != "$MD5_DOCS_AFTER" ]; then
-    printf "${RED}Aborting, ./documentation TOC(s) were not updated${NC}\n"
+    printf "${RED}Aborting, ./documentation was not updated${NC}\n"
     printf "${RED}Run lein docs${NC}\n"
     exit 1
 fi

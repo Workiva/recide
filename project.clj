@@ -22,7 +22,7 @@
 
   :aliases {"docs" ["do" "clean-docs," "with-profile" "docs" "codox," "java-docs"]
             "clean-docs" ["shell" "rm" "-rf" "./documentation"]
-            "java-docs" ["shell" "javadoc" "-d" "./documentation/java"
+            "java-docs" ["shell" "javadoc" "-d" "./documentation/java" "-notimestamp"
                          "./java-src/recide/error/ErrorForm.java"
                          "./java-src/recide/error/IErrorForm.java"
                          "./java-src/recide/sanex/ISanitizable.java"
