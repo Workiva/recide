@@ -20,11 +20,20 @@
 
   :global-vars {*warn-on-reflection* true}
 
-  :aliases {"docs" ["do" "clean-docs," "codox"]
-            "clean-docs" ["shell" "rm" "-rf" "./documentation"]}
+  :aliases {"docs" ["do" "clean-docs," "with-profile" "docs" "codox," "java-docs"]
+            "clean-docs" ["shell" "rm" "-rf" "./documentation"]
+            "java-docs" ["shell" "javadoc" "-d" "./documentation/java"
+                         "./java-src/recide/error/ErrorForm.java"
+                         "./java-src/recide/error/IErrorForm.java"
+                         "./java-src/recide/sanex/ISanitizable.java"
+                         "./java-src/recide/sanex/ISanitized.java"
+                         "./java-src/recide/sanex/Utils.java"]}
 
-  :codox {:output-path "documentation"}
+  :codox {:metadata {:doc/format :markdown}
+          :themes [:rdash]
+          :output-path "documentation/clojure"}
 
   :profiles {:dev [{:dependencies [[criterium "0.4.3"]]
                     :jvm-opts ["-Drecide.capture-insists=true"]}]
+             :docs {:dependencies [[codox-theme-rdash "0.1.2"]]}
              :aot {:aot [recide.core]}})
