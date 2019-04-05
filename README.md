@@ -1,4 +1,4 @@
-# Recide [![Clojars Project](https://img.shields.io/clojars/v/com.workiva/recide.svg)](https://clojars.org/com.workiva/recide)
+# Recide [![Clojars Project](https://img.shields.io/clojars/v/com.workiva/recide.svg)](https://clojars.org/com.workiva/recide) [![CircleCI](https://circleci.com/gh/Workiva/recide/tree/master.svg?style=svg)](https://circleci.com/gh/Workiva/recide/tree/master)
 
 *recide, second-person singular present imperative of `recidere`:* - to fall back, come to naught; to curtail
 
