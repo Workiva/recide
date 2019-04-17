@@ -1,4 +1,4 @@
-(defproject com.workiva/recide "1.0.0"
+(defproject com.workiva/recide "1.1.0"
   :description "Provides utilities for defining standard ex-info forms, as well as the capacity for checking at compile-time that they are being used as intended"
   :url "https://github.com/Workiva/recide"
   :license {:name "Apache License, Version 2.0"}
