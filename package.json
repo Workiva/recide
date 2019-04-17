@@ -1,0 +1,24 @@
+{
+  "name": "recide",
+  "version": "1.0.0",
+  "description": "Provides utilities for defining standard ex-info forms, as well as the capacity for checking at compile-time that they are being used as intended",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Workiva/recide.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/Workiva/recide/issues"
+  },
+  "homepage": "https://github.com/Workiva/recide#readme",
+  "dependencies": {
+    "markdown-toc": "^1.2.0"
+  }
+}
