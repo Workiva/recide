@@ -14,6 +14,11 @@
   * [`deferror`](#deferror)
   * [`deferror-group`](#deferror-group)
 - [Enhanced try-catch](#enhanced-try-catch)
+- [Exception Sanitization Tools](#exception-sanitization-tools)
+  * [recide.sanex.Utils](#recidesanexutils)
+    + [`getCurrentSanitizationLevel()`](#getcurrentsanitizationlevel)
+    + [`createSuppressionMap(...)`](#createsuppressionmap)
+    + [`sanitize(Throwable)`, `sanitize(Throwable, IPersistentMap)`](#sanitizethrowable-sanitizethrowable-ipersistentmap)
 - [Customized `ErrorForm`](#customized-errorform)
 - [Maintainers and Contributors](#maintainers-and-contributors)
   * [Active Maintainers](#active-maintainers)
@@ -307,6 +312,26 @@ Note that you can use keywords of the form `:namespace/*` as wildcards to catch 
 	   (println (:year (ex-data e)))))
 ;; -1839421
 ```
+
+## Exception Sanitization Tools
+
+Recide provides a collection of tools to acquire a [_sanitized_](/java-src/recide/sanex/ISanitized.java) version of a exception that should be considered safe to log (but may not be useful as a result).
+
+### recide.sanex.Utils
+
+This class contains a handful of static utility methods:
+
+#### `getCurrentSanitizationLevel()`
+
+Equivalent to deref'ing `recide.sanex/*sanitization-level*`.
+
+#### `createSuppressionMap(...)`
+
+Creates an IPersistentMap with the appropriate keywords corresponding to the boolean args.
+
+#### `sanitize(Throwable)`, `sanitize(Throwable, IPersistentMap)`
+
+Shortcut to Clojure IFn `recide.sanex/sanitize`.
 
 ## Customized `ErrorForm`
 
